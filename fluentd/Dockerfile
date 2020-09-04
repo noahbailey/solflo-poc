@@ -1,16 +1,6 @@
-FROM ubuntu:focal 
+FROM ruby:2.7-buster
 
-# => Stage 1: System prereqs
-RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive \
-    TZ=etc/UTC \
-    apt-get install -y \
-      build-essential \
-      ruby \
-      ruby-dev \
-      gem 
-
-# => Stage 2: Install the plugin
+# => Install fluentd + solr plugin
 RUN gem install fluentd --no-doc && \
     gem install fluent-plugin-out-solr
 
