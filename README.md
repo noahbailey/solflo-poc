@@ -4,6 +4,12 @@ SolFlu is a log server based on Apache Solr and Fluentd.
 
 The main objective of this system is to offer an experience similar to Elastic Stack, but without the bloat and breaking changes. 
 
+The system includes these components: 
+
+* https://www.fluentd.org/
+* https://lucene.apache.org/solr/
+* https://github.com/haruyama/fluent-plugin-out-solr
+
 ## Setup
 
 It's easy to get started: 
