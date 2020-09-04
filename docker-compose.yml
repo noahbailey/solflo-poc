@@ -1,0 +1,26 @@
+---
+
+version: '3'
+services: 
+  solr: 
+    image: solr:latest 
+    container_name: solr
+    volumes: 
+      - solrdata:/var/solr/:rw
+    ports: 
+      - 8983:8983
+    command:
+      - solr-precreate
+      - logs
+    
+
+  fluentd: 
+    build: ./fluentd 
+    volumes: 
+      - ./fluentd/fluentd.conf:/fluentd/fluentd.conf:ro
+    ports: 
+      - 5514:5514/udp
+      - 8888:8888
+
+volumes: 
+  solrdata: 
