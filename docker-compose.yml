@@ -22,5 +22,19 @@ services:
       - 5514:5514/udp
       - 8888:8888
 
+  grafana: 
+    image: grafana/grafana:latest 
+    ports: 
+      - 3000:3000
+    environment: 
+      - "GF_INSTALL_PLUGINS=pue-solr-datasource"
+
+  banana: 
+    image: aaadel/banana
+    ports: 
+      - 9901:9901
+    volumes: 
+      - ./banana/config.json:/opt/banana/config.json:ro
+
 volumes: 
   solrdata: 
