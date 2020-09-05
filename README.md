@@ -19,6 +19,10 @@ It's easy to get started:
     docker-compose build
     docker-compose up -d
 
+Then, open a browser and navigate to http://localhost:8983/solr/#/logs/query to view syslogs.
+
+Grafana is accessible at http://localhost:3000/ with default admin:admin credentials. 
+
 ## Proof of Concept
 
 This project is in its very early stages. Right now, a POC environment exists with the following components: 
