@@ -1,6 +1,6 @@
 {
     "serverPort": 9901,
-    "solrUrl": "http://solr:8983",
+    "solrUrl": "http://solr1:8983",
     "basicAuth": false,
     "username": "",
     "password": "",
